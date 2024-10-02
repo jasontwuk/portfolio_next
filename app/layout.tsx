@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import "./globals.css";
+import "../app/utilities/globals.css";
 
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -20,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} w-full`}>
-        <Header />
+        <div className="mx-auto flex min-h-screen w-full max-w-screen-lg flex-col text-sm text-slate-800 sm:text-base">
+          <Header />
 
-        {children}
+          {children}
 
-        <Footer />
+          <Footer />
+        </div>
       </body>
     </html>
   );
