@@ -98,10 +98,11 @@ export const Hero = () => {
         </div>
 
         <h1
-          className={`${nunito.className} translate-y-8 text-4xl font-bold text-slate-600 opacity-0 duration-200 md:text-5xl`}
+          className={`${nunito.className} translate-y-8 text-4xl font-thin text-slate-600 opacity-0 duration-200 md:text-5xl`}
           id="intro_name"
         >
-          I&apos;m Jason, a front-end developer.
+          I&apos;m Jason Liao,
+          <br /> a front-end developer.
         </h1>
       </div>
 
