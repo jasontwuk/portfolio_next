@@ -1,16 +1,19 @@
 import React from "react";
 import Link from "next/link";
 
-import logo from "../img/logo_blue.svg";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "../utilities/data";
+import { Logo } from "./Logo";
 
 export const Header = () => {
   return (
     <header className="flex items-center justify-between py-12">
-      <Link href="/" className="flex items-center justify-center">
-        <Image src={logo} alt="logo" />
+      <Link
+        href="/"
+        className="group flex items-center justify-center"
+        aria-label="Homepage Link"
+      >
+        <Logo />
       </Link>
 
       <div className="flex items-center justify-center">
