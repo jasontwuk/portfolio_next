@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 
 export const Dots = () => {
-  function addDot() {
+  const addDot = () => {
     // !!!!!!!! SELECT ITEMS !!!!!!!!
     const heroContainer = document.getElementById("hero_container");
     const dotsContainer = document.getElementById("dots_container");
@@ -14,6 +14,9 @@ export const Dots = () => {
     // !!!!!!!! VARIABLES !!!!!!!!
     const dotAmount = 50;
     const dotSize = 10;
+
+    // *** clear any existing dots before adding new ones
+    dotsContainer.innerHTML = "";
 
     for (let i = 0; i < dotAmount; i++) {
       const newDot = document.createElement("div");
@@ -28,9 +31,9 @@ export const Dots = () => {
       // console.log(newDot);
       dotsContainer.appendChild(newDot);
     }
-  }
+  };
 
-  function dotBlink() {
+  const dotBlink = () => {
     // !!!!!!!! SELECT ITEMS !!!!!!!!
     const dots = document.getElementsByClassName("dot");
 
@@ -45,7 +48,7 @@ export const Dots = () => {
         dots[i].classList.add("blink");
       }
     }
-  }
+  };
 
   useEffect(() => {
     addDot();
@@ -77,11 +80,23 @@ export const Dots = () => {
       heroContainer.addEventListener("mouseleave", stopBlinking);
     }
 
+    // *** handle window resizing
+    const handleResize = () => {
+      // *** re-add dots on window resize
+      addDot();
+    };
+
+    // *** add resize event listener
+    window.addEventListener("resize", handleResize);
+
     return () => {
       if (heroContainer) {
         heroContainer.removeEventListener("mouseover", startBlinking);
         heroContainer.removeEventListener("mouseleave", stopBlinking);
       }
+
+      // *** remove resize event listener
+      window.removeEventListener("resize", handleResize);
 
       // *** Clear interval when the component unmounts
       stopBlinking();
