@@ -6,6 +6,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Note: dots */
+.dots_container {
+  .dot {
+    background: rgb(255, 238, 0);
+    border-radius: 50%;
+    position: absolute;
+    transition: all 1s ease-in-out;
+  }
+  .blink {
+    visibility: hidden;
+    filter: blur(2px);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
