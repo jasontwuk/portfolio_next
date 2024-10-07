@@ -118,6 +118,7 @@ export const Hero = () => {
             src={portrait}
             alt="portrait image"
             className="h-auto w-full px-2.5"
+            priority={true}
           />
 
           <div className="absolute left-[21.5%] top-[37%] flex h-[36%] w-[57%] flex-col items-center justify-center gap-2 rounded-md border-2 border-white bg-white bg-opacity-50 text-xs text-blue-500 [transform:rotateY(180deg)] xs:text-sm">
