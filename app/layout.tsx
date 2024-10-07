@@ -4,6 +4,7 @@ import "../app/utilities/globals.css";
 
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { AccessibilityReporter } from "./components/AccessibilityReporter";
 
 import { roboto } from "./utilities/fonts";
 
@@ -21,6 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.className} w-full px-5`}>
         <div className="mx-auto flex min-h-screen w-full max-w-screen-lg flex-col text-sm text-slate-800 sm:text-base">
+          <AccessibilityReporter />
+
           <Header />
 
           {children}
