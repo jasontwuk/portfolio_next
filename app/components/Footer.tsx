@@ -1,6 +1,7 @@
 import React from "react";
-import clsx from "clsx";
 import Link from "next/link";
+
+import { UnderlineText } from "./UnderlineText";
 
 export const Footer = () => {
   return (
@@ -8,19 +9,7 @@ export const Footer = () => {
       <span>
         © 2020 - present&nbsp;
         <Link href="/" className="group no-underline">
-          <div className="inline-block">
-            <em
-              className={clsx(
-                "relative inline overflow-hidden not-italic text-blue-600",
-                // +++ Note: the hidden underline
-                "after:absolute after:-bottom-0.5 after:left-0 after:z-[-1] after:h-px after:w-0 after:bg-blue-600 after:duration-200 after:content-['']",
-                // +++ Note: show the hidden underline when hover
-                "group-hover:after:w-full",
-              )}
-            >
-              Jason Liao
-            </em>
-          </div>
+          <UnderlineText>Jason Liao</UnderlineText>
         </Link>
         .
       </span>

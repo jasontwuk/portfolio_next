@@ -14,6 +14,7 @@ import project_togoalx from "../img/projects/project_togoalx.png";
 import project_tracker from "../img/projects/project_tracker.png";
 import project_weather from "../img/projects/project_weather.png";
 import project_budget from "../img/projects/project_budget.png";
+import { UnderlineText } from "./UnderlineText";
 
 export const Projects = () => {
   type ProjectsType = {
@@ -101,23 +102,13 @@ export const Projects = () => {
                   {project.text}
                 </p>
 
-                <div className="inline-block self-end tracking-wide">
-                  <span
-                    className={clsx(
-                      "relative inline overflow-hidden not-italic text-blue-600",
-                      // +++ Note: the hidden underline
-                      "after:absolute after:-bottom-0.5 after:left-0 after:z-[-1] after:h-px after:w-0 after:bg-blue-600 after:duration-200 after:content-['']",
-                      // +++ Note: show the hidden underline when hover
-                      "group-hover:after:w-full",
-                    )}
-                  >
-                    View Project{" "}
-                    <FontAwesomeIcon
-                      icon={faAngleRight}
-                      className="h-4 w-4 shrink-0"
-                    />
-                  </span>
-                </div>
+                <UnderlineText className="self-end">
+                  View Project{" "}
+                  <FontAwesomeIcon
+                    icon={faAngleRight}
+                    className="inline-block h-4 w-4 shrink-0"
+                  />
+                </UnderlineText>
               </div>
             </Link>
           </div>
