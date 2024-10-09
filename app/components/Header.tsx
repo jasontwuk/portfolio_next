@@ -27,7 +27,7 @@ export const Header = () => {
               className="rounded-full bg-slate-300 p-1.5 text-base leading-4 text-white duration-200 hover:bg-blue-600"
               aria-label={`${icon.name} link`}
             >
-              <FontAwesomeIcon icon={icon.sign} className="h-4 w-4" />
+              <FontAwesomeIcon icon={icon.sign} className="block h-4 w-4" />
             </Link>
           ))}
         </div>

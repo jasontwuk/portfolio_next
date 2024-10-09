@@ -85,7 +85,7 @@ export const About = () => {
         </h3>
 
         <div className="flex w-full flex-wrap gap-y-2">
-          {skills.map((s, index) => {
+          {skills.map((item, index) => {
             return (
               <span
                 key={index}
@@ -93,9 +93,10 @@ export const About = () => {
               >
                 <FontAwesomeIcon
                   icon={faCheckCircle}
-                  className="h-4 w-4 shrink-0 text-blue-400"
+                  className="block h-4 w-4 shrink-0 text-blue-400"
                 />
-                <em className="font-thin not-italic">{s}</em>
+
+                <em className="font-thin not-italic">{item}</em>
               </span>
             );
           })}
