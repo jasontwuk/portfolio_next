@@ -38,7 +38,7 @@ export const Projects = () => {
       link: "task_tracker_app",
       class: "bg-green-50  before:bg-green-200",
       img: project_tracker,
-      text: "This app helps users organize and track their tasks.",
+      text: "This app helps users organise and track their tasks.",
     },
     {
       title: "Weather Forecast App",
