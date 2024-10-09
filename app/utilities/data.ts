@@ -12,7 +12,7 @@ type IconsDataType = {
 
 export const icons: IconsDataType = [
   {
-    name: "github",
+    name: "Github",
     link: "https://github.com/jasontwuk",
     sign: faGithub,
     id: 1,
