@@ -7,7 +7,7 @@ import { Logo } from "./Logo";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between py-12">
+    <header className="flex items-center justify-between">
       <Link
         href="/"
         className="group flex items-center justify-center"

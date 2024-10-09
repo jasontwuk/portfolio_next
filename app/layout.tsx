@@ -20,8 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} w-full px-5`}>
-        <div className="mx-auto flex min-h-screen w-full max-w-screen-lg flex-col text-sm text-slate-800 sm:text-base">
+      <body className={`${roboto.className} w-full px-5 py-5 md:py-12`}>
+        <div className="mx-auto flex min-h-screen w-full max-w-screen-lg flex-col gap-20 text-sm text-slate-800 sm:text-base">
           <AccessibilityReporter />
 
           <Header />

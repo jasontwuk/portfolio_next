@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-wrap items-center justify-center gap-2 pb-12 text-center">
+    <footer className="flex flex-wrap items-center justify-center gap-2 text-center">
       <span>
         © 2020 - present&nbsp;
         <Link href="/" className="group no-underline">
