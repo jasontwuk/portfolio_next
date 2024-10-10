@@ -73,7 +73,7 @@ export const Hero = () => {
       className="flex flex-col items-center justify-center md:flex-row"
       id="intro"
     >
-      <div className="flex w-full flex-col gap-4 text-center md:w-1/2 md:text-left">
+      <div className="flex w-full flex-col gap-4 text-center md:w-1/2 md:px-5 md:text-left">
         <div
           className={`${nunito.className} flex items-end justify-center gap-1 font-black tracking-widest md:justify-start`}
         >
@@ -107,7 +107,7 @@ export const Hero = () => {
       </div>
 
       <div
-        className="flex w-full items-center md:min-h-[407px] md:w-1/2"
+        className="max-w-128 flex w-full items-center md:min-h-[452px] md:w-1/2 md:px-5"
         id="intro_portrait"
       >
         <div
@@ -121,7 +121,7 @@ export const Hero = () => {
             priority={true}
           />
 
-          <div className="absolute left-[21.5%] top-[37%] flex h-[36%] w-[57%] flex-col items-center justify-center gap-2 rounded-md border-2 border-white bg-white bg-opacity-50 text-xs text-blue-500 [transform:rotateY(180deg)] xs:text-sm">
+          <div className="text-xxs absolute left-[21.5%] top-[37%] flex h-[36%] w-[57%] flex-col items-center justify-center gap-1 rounded-md border-2 border-white bg-white bg-opacity-50 tracking-wider text-blue-500 [transform:rotateY(180deg)] xs:gap-2 xs:text-xs">
             <span className="opacity-0 duration-200" id="screen_code_1">
               console.log(&quot;Hello.&quot;);
             </span>

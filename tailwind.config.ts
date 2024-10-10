@@ -13,6 +13,10 @@ const config: Config = {
       },
       spacing: {
         "18": "4.5rem",
+        "128": "32rem",
+      },
+      fontSize: {
+        xxs: ["10px", "12px"],
       },
     },
   },
