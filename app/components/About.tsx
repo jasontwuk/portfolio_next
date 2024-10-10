@@ -9,7 +9,7 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 export const About = () => {
   const paragraphs: string[] = [
-    "Hi, I’m Jason, a dedicated front-end developer with over 3 years of experience in developing and optimising responsive, user-friendly web applications and interfaces.",
+    "I’m a dedicated front-end developer with over 3 years of experience in developing and optimising responsive, user-friendly web applications and interfaces.",
     "My passion for front-end development is driven by the desire to build solutions that help users from the ground up using code. I take pride in crafting clean and efficient code, always with the end-user in mind. I am proficient in Next.js, React.js, HTML, CSS, JavaScript ES6, Tailwind, and Git, and I continually seek opportunities to expand my skill set and enhance my craft.",
     "I thrive on attention to detail and am committed to ensuring that every project I undertake delivers both functionality and aesthetic appeal. I enjoy the process of transforming designs into interactive, high-performing user experiences.",
   ];
@@ -61,7 +61,7 @@ export const About = () => {
       id="about"
     >
       <h2 className={`${nunito.className} text-3xl text-blue-800 md:text-4xl`}>
-        About Me
+        About
       </h2>
 
       <div className="flex flex-col items-center justify-center gap-5 md:px-5">
