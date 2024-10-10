@@ -20,7 +20,7 @@ export const Contact = () => {
         Contact
       </h2>
 
-      <div className="flex flex-col items-start justify-center gap-5 md:flex-row md:px-5">
+      <div className="flex flex-col items-start justify-center gap-5 md:flex-row md:pl-5">
         <div className="flex w-full flex-col items-start justify-center gap-8 md:w-1/2">
           <p className="text-lg font-thin leading-7 tracking-wider md:text-xl md:leading-8">
             Got a question or just want to say hi? Feel free to drop me a

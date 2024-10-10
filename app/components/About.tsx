@@ -64,7 +64,7 @@ export const About = () => {
         About
       </h2>
 
-      <div className="flex flex-col items-center justify-center gap-5 md:px-5">
+      <div className="flex flex-col items-center justify-center gap-5 md:pl-5">
         {paragraphs.map((p, index) => {
           return (
             <p
@@ -77,7 +77,7 @@ export const About = () => {
         })}
       </div>
 
-      <div className="flex flex-col items-start justify-center gap-5 rounded-md bg-blue-50 p-5 md:mx-5">
+      <div className="flex flex-col items-start justify-center gap-5 rounded-md bg-blue-50 p-5 md:ml-5">
         <h3
           className={`${nunito.className} w-full rounded-md bg-white py-2 text-center text-xl text-blue-800 md:text-2xl`}
         >

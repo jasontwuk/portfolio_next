@@ -62,10 +62,10 @@ export const Projects = () => {
         Projects
       </h2>
 
-      <div className="flex flex-wrap items-start justify-center gap-y-10">
+      <div className="flex flex-wrap items-start justify-center gap-x-10 gap-y-10 md:pl-5">
         {projects.map((project, index) => (
           <div
-            className="flex w-full flex-col items-center justify-center md:w-1/2 md:px-5"
+            className="flex w-full flex-col items-center justify-center md:w-[calc(50%-1.25rem)]"
             key={index}
           >
             <Link
