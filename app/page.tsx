@@ -1,11 +1,12 @@
 import { About } from "./components/About";
+import { Contact } from "./components/Contact";
 import { Dots } from "./components/Dots";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center gap-10">
+    <div className="flex flex-col items-center justify-center gap-20">
       <div className="relative w-full" id="hero_container">
         <Hero />
         <Dots />
@@ -14,6 +15,8 @@ export default function Home() {
       <About />
 
       <Projects />
+
+      <Contact />
     </div>
   );
 }
