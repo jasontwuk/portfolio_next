@@ -17,7 +17,7 @@ import project_budget from "../img/projects/project_budget.png";
 import { UnderlineText } from "./UnderlineText";
 
 type ProjectsProps = {
-  id: string;
+  id?: string;
 };
 
 export const Projects = (props: ProjectsProps) => {
