@@ -57,7 +57,7 @@ export const About = () => {
   }, []);
   return (
     <div
-      className="flex translate-y-8 flex-col items-start justify-center gap-10 opacity-0 duration-200"
+      className="flex translate-y-8 flex-col items-start justify-center gap-8 opacity-0 duration-200"
       id="about"
     >
       <h2 className={`${nunito.className} text-3xl text-blue-800 md:text-4xl`}>

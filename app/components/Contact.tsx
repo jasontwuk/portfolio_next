@@ -15,7 +15,7 @@ import { CodeWithLove } from "./CodeWithLove";
 
 export const Contact = () => {
   return (
-    <div className="flex flex-col items-start justify-center gap-10">
+    <div className="flex flex-col items-start justify-center gap-8">
       <h2 className={`${nunito.className} text-3xl text-blue-800 md:text-4xl`}>
         Contact
       </h2>
