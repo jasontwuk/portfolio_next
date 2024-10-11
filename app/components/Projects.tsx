@@ -16,10 +16,18 @@ import project_weather from "../img/projects/project_weather.png";
 import project_budget from "../img/projects/project_budget.png";
 import { UnderlineText } from "./UnderlineText";
 
-export const Projects = () => {
+type ProjectsProps = {
+  id: string;
+};
+
+export const Projects = (props: ProjectsProps) => {
+  const { id } = props;
+
+  let newProjects = null;
+
   type ProjectsType = {
     title: string;
-    link: string;
+    id: string;
     class: string;
     img: StaticImageData;
     text: string;
@@ -28,48 +36,66 @@ export const Projects = () => {
   const projects: ProjectsType[] = [
     {
       title: "ToGoalx App",
-      link: "togoalx_app",
+      id: "togoalx_app",
       class: "bg-indigo-50 before:bg-indigo-200",
       img: project_togoalx,
       text: "This app lets users create their achievement record and check on their daily and monthly progress.",
     },
     {
       title: "Task Tracker App",
-      link: "task_tracker_app",
+      id: "task_tracker_app",
       class: "bg-green-50  before:bg-green-200",
       img: project_tracker,
       text: "This app helps users organise and track their tasks.",
     },
     {
       title: "Weather Forecast App",
-      link: "weather_forecast_app",
+      id: "weather_forecast_app",
       class: "bg-yellow-50  before:bg-yellow-200",
       img: project_weather,
       text: "An app that shows today's and the future week's weather.",
     },
     {
       title: "Budget App",
-      link: "budget_app",
+      id: "budget_app",
       class: "bg-purple-50  before:bg-purple-200",
       img: project_budget,
       text: "This app helps users manage their budgets and expenses.",
     },
   ];
 
+  // *** Note: for "Other Projects" section in the project page
+  const otherProjects = projects.filter((project) => project.id !== id);
+
+  if (id) {
+    // *** Note: for "Other Projects" section in the project page
+    newProjects = otherProjects;
+  } else {
+    // *** Note: for "Projects" section in the home page
+    newProjects = projects;
+  }
+
   return (
-    <div className="flex flex-col items-start justify-center gap-10">
+    <div className="flex flex-col items-start justify-center gap-8">
       <h2 className={`${nunito.className} text-3xl text-blue-800 md:text-4xl`}>
-        Projects
+        {id ? "Other Projects" : "Projects"}
       </h2>
 
-      <div className="flex flex-wrap items-start justify-center gap-x-10 gap-y-10 md:pl-5">
-        {projects.map((project, index) => (
+      <div className="flex flex-wrap items-start justify-center gap-x-6 gap-y-8 md:gap-x-8 md:pl-5">
+        {newProjects.map((project, index) => (
           <div
-            className="flex w-full flex-col items-center justify-center md:w-[calc(50%-1.25rem)]"
+            className={clsx(
+              id
+                ? // +++ Note: for "Other Projects" section in the project page
+                  "w-full xs:w-[calc(50%-0.75rem)] md:w-[calc(33.33%-1.34rem)]"
+                : // +++ Note: for "Projects" section in the home page
+                  "w-full md:w-[calc(50%-1rem)]",
+              "flex flex-col items-center justify-center",
+            )}
             key={index}
           >
             <Link
-              href={project.link}
+              href={project.id}
               className="group flex w-full flex-col items-center justify-center gap-4"
             >
               <div
