@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import { AccessibilityReporter } from "./components/AccessibilityReporter";
 
 import { roboto } from "./utilities/fonts";
+import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: "Home - Jason Liao",
@@ -20,8 +21,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} w-full px-5 py-5 md:py-12`}>
-        <div className="mx-auto flex min-h-screen w-full max-w-screen-lg flex-col gap-20 text-sm text-slate-800 sm:text-base">
+      <body
+        className={clsx(
+          roboto.className,
+          "w-full bg-white px-5 py-5 md:py-12",
+          // +++ Note: for dark mode
+          "dark:bg-zinc-800",
+        )}
+      >
+        <div
+          className={clsx(
+            "mx-auto flex min-h-screen w-full max-w-screen-lg flex-col gap-20 text-sm text-slate-800 sm:text-base",
+            // +++ Note: for dark mode
+            "dark:text-slate-200",
+          )}
+        >
           <AccessibilityReporter />
 
           <Header />
