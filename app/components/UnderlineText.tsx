@@ -18,6 +18,8 @@ export const UnderlineText = (props: UnderlineTextProps) => {
           "after:absolute after:-bottom-0.5 after:left-0 after:z-[-1] after:h-px after:w-0 after:bg-blue-600 after:duration-200 after:content-['']",
           // +++ Note: show the hidden underline when hover
           "group-hover:after:w-full",
+          // +++ Note: for dark mode
+          "dark:text-blue-300 dark:after:bg-blue-300",
         )}
       >
         {children}

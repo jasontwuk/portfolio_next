@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 import portrait from "../img/portrait.svg";
 import { nunito } from "../utilities/fonts";
@@ -98,7 +99,12 @@ export const Hero = () => {
         </div>
 
         <h1
-          className={`${nunito.className} translate-y-8 text-4xl font-thin text-slate-600 opacity-0 duration-200 md:text-5xl`}
+          className={clsx(
+            nunito.className,
+            "translate-y-8 text-4xl font-thin text-slate-600 opacity-0 duration-200 md:text-5xl",
+            // +++ Note: for dark mode
+            "dark:text-white",
+          )}
           id="intro_name"
         >
           I&apos;m Jason Liao,
@@ -107,7 +113,7 @@ export const Hero = () => {
       </div>
 
       <div
-        className="max-w-128 flex w-full items-center md:min-h-[452px] md:w-1/2 md:px-5"
+        className="flex w-full max-w-128 items-center md:min-h-[452px] md:w-1/2 md:px-5"
         id="intro_portrait"
       >
         <div
@@ -121,7 +127,7 @@ export const Hero = () => {
             priority={true}
           />
 
-          <div className="text-xxs absolute left-[21.5%] top-[37%] flex h-[36%] w-[57%] flex-col items-center justify-center gap-1 rounded-md border-2 border-white bg-white bg-opacity-50 tracking-wider text-blue-500 [transform:rotateY(180deg)] xs:gap-2 xs:text-xs">
+          <div className="absolute left-[21.5%] top-[37%] flex h-[36%] w-[57%] flex-col items-center justify-center gap-1 rounded-md border-2 border-white bg-white bg-opacity-50 text-xxs tracking-wider text-blue-500 [transform:rotateY(180deg)] xs:gap-2 xs:text-xs">
             <span className="opacity-0 duration-200" id="screen_code_1">
               console.log(&quot;Hello.&quot;);
             </span>

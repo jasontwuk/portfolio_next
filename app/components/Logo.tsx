@@ -1,8 +1,15 @@
 import React from "react";
+import clsx from "clsx";
 
 export const Logo = () => {
   return (
-    <div className="text-blue-800 duration-200 group-hover:text-blue-600">
+    <div
+      className={clsx(
+        "text-blue-800 duration-200 group-hover:text-blue-600",
+        // +++ Note: for dark mode
+        "dark:text-blue-400 dark:group-hover:text-white",
+      )}
+    >
       <svg
         version="1.1"
         id="Layer_1"

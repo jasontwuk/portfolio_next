@@ -52,7 +52,12 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
             </span>
 
             <h1
-              className={`${nunito.className} text-3xl text-blue-800 md:text-4xl`}
+              className={clsx(
+                nunito.className,
+                "text-3xl font-bold text-blue-800 md:text-4xl",
+                // +++ Note: for dark mode
+                "dark:text-blue-400",
+              )}
             >
               {title}
             </h1>
@@ -66,12 +71,26 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                   target="_blank"
                   rel="noreferrer"
                   key={index}
-                  className="group flex h-16 w-16 flex-col items-center justify-center gap-0 rounded-full bg-blue-100 duration-200 hover:bg-blue-600"
+                  className={clsx(
+                    "group flex h-16 w-16 flex-col items-center justify-center gap-0 rounded-full bg-blue-100 duration-200 hover:bg-blue-600",
+                    // +++ Note: for dark mode
+                    "dark:bg-blue-300 dark:hover:bg-blue-600",
+                  )}
                 >
-                  <div className="flex items-center justify-center rounded-full bg-white p-1">
+                  <div
+                    className={clsx(
+                      "flex items-center justify-center rounded-full bg-white p-1",
+                      // +++ Note: for dark mode
+                      "dark:bg-zinc-800",
+                    )}
+                  >
                     <FontAwesomeIcon
                       icon={obj.icon}
-                      className="block h-3 w-3 shrink-0 text-blue-800 group-hover:text-blue-600"
+                      className={clsx(
+                        "block h-3 w-3 shrink-0 text-blue-800",
+                        // +++ Note: for dark mode
+                        "dark:text-slate-200 dark:group-hover:text-slate-200",
+                      )}
                     />
                   </div>
 
@@ -102,7 +121,12 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
         <div className="flex w-full flex-col items-start justify-center gap-8 md:flex-row md:pl-5">
           <div className="flex w-full flex-col items-center justify-center md:w-3/5">
             <h2
-              className={`${nunito.className} w-full border-b border-slate-400 py-2 text-center text-xl text-blue-800 md:text-2xl`}
+              className={clsx(
+                nunito.className,
+                "w-full border-b border-slate-400 py-2 text-center text-xl text-blue-800 md:text-2xl",
+                // +++ Note: for dark mode
+                "dark:text-white",
+              )}
             >
               Used technologies:
             </h2>
@@ -116,7 +140,11 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                   >
                     <FontAwesomeIcon
                       icon={faCheckCircle}
-                      className="block h-4 w-4 shrink-0 text-blue-400"
+                      className={clsx(
+                        "block h-4 w-4 shrink-0 text-blue-400",
+                        // +++ Note: for dark mode
+                        "dark:text-slate-400",
+                      )}
                     />
 
                     <span className="font-thin">{item}</span>
@@ -128,7 +156,12 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
 
           <div className="flex w-full flex-col items-center justify-center md:w-2/5">
             <h2
-              className={`${nunito.className} w-full border-b border-slate-400 py-2 text-center text-xl text-blue-800 md:text-2xl`}
+              className={clsx(
+                nunito.className,
+                "w-full border-b border-slate-400 py-2 text-center text-xl text-blue-800 md:text-2xl",
+                // +++ Note: for dark mode
+                "dark:text-white",
+              )}
             >
               Used resource:
             </h2>
@@ -142,7 +175,11 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                   >
                     <FontAwesomeIcon
                       icon={faCheckCircle}
-                      className="block h-4 w-4 shrink-0 text-blue-400"
+                      className={clsx(
+                        "block h-4 w-4 shrink-0 text-blue-400",
+                        // +++ Note: for dark mode
+                        "dark:text-slate-400",
+                      )}
                     />
 
                     <span className="font-thin">{item}</span>
@@ -168,6 +205,8 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                   `${index % 2 && "md:order-1"}`,
                   imgBgColour,
                   "flex items-center justify-center rounded-lg p-4",
+                  // +++ Note: for dark mode
+                  "dark:bg-slate-400",
                 )}
               >
                 <Image
@@ -183,7 +222,12 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
 
               <div className="flex flex-col items-center justify-start gap-4">
                 <h2
-                  className={`${nunito.className} w-full text-xl text-blue-800 md:text-2xl`}
+                  className={clsx(
+                    nunito.className,
+                    "w-full text-xl text-blue-800 md:text-2xl",
+                    // +++ Note: for dark mode
+                    "dark:text-white",
+                  )}
                 >
                   {obj.title}
                 </h2>

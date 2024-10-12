@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -16,7 +17,14 @@ import { CodeWithLove } from "./CodeWithLove";
 export const Contact = () => {
   return (
     <div className="flex flex-col items-start justify-center gap-8">
-      <h2 className={`${nunito.className} text-3xl text-blue-800 md:text-4xl`}>
+      <h2
+        className={clsx(
+          nunito.className,
+          "text-3xl font-bold text-blue-800 md:text-4xl",
+          // +++ Note: for dark mode
+          "dark:text-blue-400",
+        )}
+      >
         Contact
       </h2>
 
@@ -36,7 +44,13 @@ export const Contact = () => {
                 rel="noreferrer"
                 key={icon.id}
               >
-                <div className="rounded-full bg-slate-300 p-1.5 text-base leading-4 text-white duration-200 group-hover:bg-blue-600">
+                <div
+                  className={clsx(
+                    "rounded-full bg-slate-300 p-1.5 text-base leading-4 text-white duration-200 group-hover:bg-blue-600",
+                    // +++ Note: for dark mode
+                    "dark:bg-slate-400",
+                  )}
+                >
                   <FontAwesomeIcon
                     icon={icon.sign}
                     className="block h-4 w-4 shrink-0"

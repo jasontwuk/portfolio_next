@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import clsx from "clsx";
 
 import { nunito } from "../utilities/fonts";
 
@@ -60,7 +61,14 @@ export const About = () => {
       className="flex translate-y-8 flex-col items-start justify-center gap-8 opacity-0 duration-200"
       id="about"
     >
-      <h2 className={`${nunito.className} text-3xl text-blue-800 md:text-4xl`}>
+      <h2
+        className={clsx(
+          nunito.className,
+          "text-3xl font-bold text-blue-800 md:text-4xl",
+          // +++ Note: for dark mode
+          "dark:text-blue-400",
+        )}
+      >
         About
       </h2>
 
@@ -77,9 +85,20 @@ export const About = () => {
         })}
       </div>
 
-      <div className="flex flex-col items-start justify-center gap-5 rounded-md bg-blue-50 p-5 md:ml-5">
+      <div
+        className={clsx(
+          "flex flex-col items-start justify-center gap-5 rounded-md bg-blue-50 p-5 md:ml-5",
+          // +++ Note: for dark mode
+          "dark:bg-slate-600",
+        )}
+      >
         <h3
-          className={`${nunito.className} w-full rounded-md bg-white py-2 text-center text-xl text-blue-800 md:text-2xl`}
+          className={clsx(
+            nunito.className,
+            "w-full rounded-md bg-white py-2 text-center text-xl text-blue-800 md:text-2xl",
+            // +++ Note: for dark mode
+            "dark:bg-zinc-800 dark:text-white",
+          )}
         >
           Main Skills
         </h3>
@@ -93,7 +112,11 @@ export const About = () => {
               >
                 <FontAwesomeIcon
                   icon={faCheckCircle}
-                  className="block h-4 w-4 shrink-0 text-blue-400"
+                  className={clsx(
+                    "block h-4 w-4 shrink-0 text-blue-400",
+                    // +++ Note: for dark mode
+                    "dark:text-slate-400",
+                  )}
                 />
 
                 <em className="font-thin not-italic">{item}</em>

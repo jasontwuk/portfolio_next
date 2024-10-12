@@ -37,28 +37,32 @@ export const Projects = (props: ProjectsProps) => {
     {
       title: "ToGoalx App",
       id: "togoalx_app",
-      class: "bg-indigo-50 before:bg-indigo-200",
+      class:
+        "bg-indigo-50 before:bg-indigo-200 dark:bg-slate-500 dark:before:bg-indigo-500",
       img: project_togoalx,
       text: "This app lets users create their achievement record and check on their daily and monthly progress.",
     },
     {
       title: "Task Tracker App",
       id: "task_tracker_app",
-      class: "bg-green-50  before:bg-green-200",
+      class:
+        "bg-green-50  before:bg-green-200 dark:bg-slate-500 dark:before:bg-green-500",
       img: project_tracker,
       text: "This app helps users organise and track their tasks.",
     },
     {
       title: "Weather Forecast App",
       id: "weather_forecast_app",
-      class: "bg-yellow-50  before:bg-yellow-200",
+      class:
+        "bg-yellow-50  before:bg-yellow-200 dark:bg-slate-500 dark:before:bg-yellow-500",
       img: project_weather,
       text: "An app that shows today's and the future week's weather.",
     },
     {
       title: "Budget App",
       id: "budget_app",
-      class: "bg-purple-50  before:bg-purple-200",
+      class:
+        "bg-purple-50  before:bg-purple-200 dark:bg-slate-500 dark:before:bg-purple-500",
       img: project_budget,
       text: "This app helps users manage their budgets and expenses.",
     },
@@ -77,7 +81,14 @@ export const Projects = (props: ProjectsProps) => {
 
   return (
     <div className="flex flex-col items-start justify-center gap-8">
-      <h2 className={`${nunito.className} text-3xl text-blue-800 md:text-4xl`}>
+      <h2
+        className={clsx(
+          nunito.className,
+          "text-3xl font-bold text-blue-800 md:text-4xl",
+          // +++ Note: for dark mode
+          "dark:text-blue-400",
+        )}
+      >
         {id ? "Other Projects" : "Projects"}
       </h2>
 
@@ -120,7 +131,13 @@ export const Projects = (props: ProjectsProps) => {
               </div>
 
               <div className="flex w-full flex-col items-start justify-center gap-1">
-                <h3 className="text-xl font-bold tracking-wider text-slate-500">
+                <h3
+                  className={clsx(
+                    "text-xl font-bold tracking-wider text-slate-500",
+                    // +++ Note: for dark mode
+                    "dark:text-white",
+                  )}
+                >
                   {project.title}
                 </h3>
 
