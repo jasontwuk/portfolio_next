@@ -141,11 +141,14 @@ export const Projects = (props: ProjectsProps) => {
                 </p>
 
                 <UnderlineText className="self-end">
-                  View Project{" "}
-                  <FontAwesomeIcon
-                    icon={faAngleRight}
-                    className="inline-block h-4 w-4 shrink-0"
-                  />
+                  <div className="flex shrink-0 items-center justify-center gap-0">
+                    <span>View Project</span>
+
+                    <FontAwesomeIcon
+                      icon={faAngleRight}
+                      className="inline-block h-4 w-4 shrink-0"
+                    />
+                  </div>
                 </UnderlineText>
               </div>
             </Link>
