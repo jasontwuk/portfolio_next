@@ -39,7 +39,7 @@ function TaskTrackerApp() {
 
   const resource: string[] = ["GoogleMap", "OpenWeatherMap", "Npm packages"];
 
-  const imgBgColour: string = "bg-yellow-50";
+  const imgBgColour: string = "from-yellow-50 to-yellow-200";
 
   type DetailsType = {
     src: StaticImageData;

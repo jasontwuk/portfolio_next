@@ -205,9 +205,9 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                   // +++ Note: handle change image and contnets order
                   `${index % 2 && "md:order-1"}`,
                   imgBgColour,
-                  "flex items-center justify-center rounded-lg p-4",
+                  "flex items-center justify-center rounded-lg bg-gradient-to-b p-4",
                   // +++ Note: for dark mode
-                  "dark:bg-slate-400",
+                  "dark:bg-gradient-to-b dark:from-slate-500 dark:to-slate-700",
                 )}
               >
                 <Image

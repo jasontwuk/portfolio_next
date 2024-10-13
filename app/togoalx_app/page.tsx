@@ -56,7 +56,7 @@ function TogoalxApp() {
 
   const resource: string[] = ["Netify", "Npm packages", "Font Awesome"];
 
-  const imgBgColour: string = "bg-indigo-50";
+  const imgBgColour: string = "from-indigo-50 to-indigo-200";
 
   type DetailsType = {
     src: StaticImageData;

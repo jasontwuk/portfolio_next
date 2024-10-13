@@ -44,7 +44,7 @@ function TogoalxApp() {
 
   const resource: string[] = ["Github", "Npm packages", "Font Awesome"];
 
-  const imgBgColour: string = "bg-purple-50";
+  const imgBgColour: string = "from-purple-50 to-purple-200";
 
   type DetailsType = {
     src: StaticImageData;

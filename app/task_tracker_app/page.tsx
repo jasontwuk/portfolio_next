@@ -51,7 +51,7 @@ function TaskTrackerApp() {
 
   const resource: string[] = ["Github", "Npm packages"];
 
-  const imgBgColour: string = "bg-green-50";
+  const imgBgColour: string = "from-green-50 to-green-200";
 
   type DetailsType = {
     src: StaticImageData;
