@@ -16,11 +16,9 @@ export const ThemeSwitch = () => {
   type PathsType = {
     sun: {
       d: string;
-      color: string;
     };
     moon: {
       d: string;
-      color: string;
     };
   };
 
@@ -28,12 +26,10 @@ export const ThemeSwitch = () => {
     // *** Note: for light theme
     sun: {
       d: "M23.417.048c-.161.019-.705.075-1.209.125C15.548.839 9.18 4.477 5.009 10 .602 15.836-.994 23.315.626 30.54c1.281 5.709 4.598 10.827 9.359 14.439 3.319 2.518 7.145 4.1 11.597 4.794 1.634.254 5.202.254 6.836 0 6.075-.947 11.239-3.686 15.115-8.017 3.435-3.839 5.42-8.083 6.24-13.338.146-.943.175-1.5.175-3.418 0-1.918-.029-2.475-.175-3.418-.694-4.452-2.276-8.278-4.794-11.597C40.845 4.537 34.941 1.111 28.125.207c-.946-.126-4.079-.231-4.708-.159",
-      color: "#f9991c",
     },
     // *** Note: for dark theme
     moon: {
       d: "M23.542.121a3.494 3.494 0 0 1-.315.082c-.275.061-.856.566-1.024.891-.166.321-.146.967.041 1.364.087.184.391.596.676.917 4.048 4.555 5.791 10.647 4.779 16.708-.572 3.43-2.14 6.772-4.478 9.548-3.228 3.832-8.06 6.353-13.173 6.873-1.425.145-4.06.063-5.34-.167-.594-.107-1.135-.159-1.333-.13-.516.078-.91.387-1.169.916-.334.681-.271 1.036.342 1.939 3.075 4.526 7.872 8.044 13.144 9.639 4.05 1.225 8.148 1.423 12.27.591 9.726-1.963 17.457-9.672 19.421-19.364.888-4.387.638-8.606-.76-12.815-1.282-3.858-3.274-7.033-6.217-9.908-2.723-2.66-5.697-4.508-9.237-5.74C29.296.814 27.038.332 25.292.212c-.413-.028-.957-.067-1.209-.086-.252-.02-.496-.022-.541-.005",
-      color: "#f9d71c",
     },
   };
 
@@ -105,18 +101,24 @@ export const ThemeSwitch = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="p-2" aria-describedby="theme-mode">
+    <button
+      onClick={toggleTheme}
+      className="group p-2 duration-200 hover:scale-110"
+      aria-describedby="theme-mode"
+    >
       <div className="relative">
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 50 50"
           fill="currentColor"
-          className="h-6 w-6"
+          className={clsx(
+            theme === "light"
+              ? "text-amber-500 group-hover:text-amber-400"
+              : "text-yellow-300 group-hover:text-yellow-200",
+            "h-6 w-6",
+          )}
         >
-          <motion.path
-            d={svgPathD}
-            fill={theme === "light" ? paths.sun.color : paths.moon.color}
-          />
+          <motion.path d={svgPathD} />
         </motion.svg>
 
         {/* Note: sun rays */}
@@ -136,7 +138,7 @@ export const ThemeSwitch = () => {
                 className={clsx(
                   "absolute h-6 w-6",
                   // +++ Note: individual ray
-                  "before:absolute before:-top-2 before:left-1/2 before:h-1.5 before:w-[0.15rem] before:-translate-x-1/2 before:rounded-xl before:bg-yellow-400 before:duration-200 before:content-['']",
+                  "before:absolute before:-top-2 before:left-1/2 before:h-1.5 before:w-[0.15rem] before:-translate-x-1/2 before:rounded-xl before:bg-amber-300 before:duration-200 before:content-[''] group-hover:before:bg-amber-200",
                   // +++ Note: rays' rotation
                   `rotate-[${rotation}deg]`,
                   // +++ Note: rays grow and fade from the centre of the sun.
