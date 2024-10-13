@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import clsx from "clsx";
 
 import { nunito } from "../utilities/fonts";
@@ -10,6 +10,7 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 import { Projects } from "./Projects";
+import { ImageTemplate } from "./ImageTemplate";
 
 type ProjectTemplateProps = {
   title: string;
@@ -210,15 +211,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                   "dark:bg-gradient-to-b dark:from-slate-500 dark:to-slate-700",
                 )}
               >
-                <Image
-                  src={obj.src}
-                  alt={obj.imageAlt}
-                  className={clsx(
-                    "drop-shadow-md",
-                    // +++ Note: make the image responsive
-                    "h-80 w-80 object-scale-down md:h-full",
-                  )}
-                />
+                <ImageTemplate src={obj.src} alt={obj.imageAlt} />
               </div>
 
               <div className="flex flex-col items-center justify-start gap-4">

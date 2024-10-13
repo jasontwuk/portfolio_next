@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import clsx from "clsx";
 import { StaticImageData } from "next/image";
 
@@ -14,7 +13,9 @@ import project_togoalx from "../img/projects/project_togoalx.png";
 import project_tracker from "../img/projects/project_tracker.png";
 import project_weather from "../img/projects/project_weather.png";
 import project_budget from "../img/projects/project_budget.png";
+
 import { UnderlineText } from "./UnderlineText";
+import { ImageTemplate } from "./ImageTemplate";
 
 type ProjectsProps = {
   id?: string;
@@ -121,15 +122,7 @@ export const Projects = (props: ProjectsProps) => {
                   project.class,
                 )}
               >
-                <Image
-                  src={project.img}
-                  alt={project.title}
-                  className={clsx(
-                    "drop-shadow-md",
-                    // +++ Note: make the image responsive
-                    "h-80 w-80 object-scale-down",
-                  )}
-                />
+                <ImageTemplate src={project.img} alt={project.title} />
               </div>
 
               <div className="flex w-full flex-col items-start justify-center gap-1">
