@@ -46,7 +46,7 @@ export const Contact = () => {
               >
                 <div
                   className={clsx(
-                    "rounded-full bg-slate-300 p-1.5 text-base leading-4 text-white duration-200 group-hover:bg-blue-600",
+                    "rounded-full bg-slate-300 p-1.5 text-base leading-4 text-white duration-200 group-hover:scale-110 group-hover:bg-blue-600",
                     // +++ Note: for dark mode
                     "dark:bg-slate-400",
                   )}
