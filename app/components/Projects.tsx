@@ -38,7 +38,7 @@ export const Projects = (props: ProjectsProps) => {
       title: "ToGoalx App",
       id: "togoalx_app",
       class:
-        "bg-indigo-50 before:bg-indigo-200 dark:bg-slate-500 dark:before:bg-indigo-500",
+        "bg-indigo-50 before:from-indigo-100 before:to-indigo-300 dark:before:to-indigo-500",
       img: project_togoalx,
       text: "This app lets users create their achievement record and check on their daily and monthly progress.",
     },
@@ -46,7 +46,7 @@ export const Projects = (props: ProjectsProps) => {
       title: "Task Tracker App",
       id: "task_tracker_app",
       class:
-        "bg-green-50  before:bg-green-200 dark:bg-slate-500 dark:before:bg-green-500",
+        "bg-green-50 before:from-green-100 before:to-green-300 dark:before:to-green-500",
       img: project_tracker,
       text: "This app helps users organise and track their tasks.",
     },
@@ -54,7 +54,7 @@ export const Projects = (props: ProjectsProps) => {
       title: "Weather Forecast App",
       id: "weather_forecast_app",
       class:
-        "bg-yellow-50  before:bg-yellow-200 dark:bg-slate-500 dark:before:bg-yellow-500",
+        "bg-yellow-50 before:from-yellow-100 before:to-yellow-300 dark:before:to-yellow-500",
       img: project_weather,
       text: "An app that shows today's and the future week's weather.",
     },
@@ -62,7 +62,7 @@ export const Projects = (props: ProjectsProps) => {
       title: "Budget App",
       id: "budget_app",
       class:
-        "bg-purple-50  before:bg-purple-200 dark:bg-slate-500 dark:before:bg-purple-500",
+        "bg-purple-50 before:from-purple-100 before:to-purple-300 dark:before:to-purple-500",
       img: project_budget,
       text: "This app helps users manage their budgets and expenses.",
     },
@@ -111,9 +111,11 @@ export const Projects = (props: ProjectsProps) => {
             >
               <div
                 className={clsx(
-                  "relative flex h-full w-full items-center justify-center rounded-lg p-4",
+                  "relative flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br p-4 dark:from-transparent dark:to-slate-500",
                   // +++ Note: the hidden colour block
                   "before:absolute before:left-0 before:top-0 before:z-[-1] before:flex before:h-full before:w-full before:items-end before:justify-end before:rounded-lg before:px-1 before:text-white before:duration-200 before:content-['✦']",
+                  // +++ Note: hidden colour block's gradient bg setting
+                  "before:bg-gradient-to-br before:from-50% dark:before:from-transparent",
                   // +++ Note: show the hidden colour block when hover
                   "group-hover:before:left-4 group-hover:before:top-4",
                   project.class,
