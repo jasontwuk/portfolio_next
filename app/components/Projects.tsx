@@ -128,7 +128,7 @@ export const Projects = (props: ProjectsProps) => {
               <div className="flex w-full flex-col items-start justify-center gap-1">
                 <h3
                   className={clsx(
-                    "text-xl font-bold tracking-wider text-slate-500",
+                    "w-full text-xl font-bold tracking-wider text-slate-500",
                     // +++ Note: for dark mode
                     "dark:text-white",
                   )}
