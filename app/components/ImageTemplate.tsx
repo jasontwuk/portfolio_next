@@ -32,7 +32,7 @@ export const ImageTemplate = (props: ImageTemplateProps) => {
           className={clsx(
             "flex items-center justify-center bg-gray-400 object-scale-down",
             isContact
-              ? "aspect-square w-56 rounded-full xs:w-72"
+              ? "aspect-square w-56 rounded-full dark:shadow-2xl dark:shadow-white xs:w-72"
               : "h-52 w-full max-w-80 rounded",
             // +++ Note: animate effect
             "animate-pulse",
