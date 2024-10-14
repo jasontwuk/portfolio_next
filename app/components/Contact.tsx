@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 
@@ -13,6 +12,7 @@ import jason from "../img/jason.jpg";
 
 import { UnderlineText } from "./UnderlineText";
 import { CodeWithLove } from "./CodeWithLove";
+import { ImageTemplate } from "./ImageTemplate";
 
 export const Contact = () => {
   return (
@@ -65,11 +65,9 @@ export const Contact = () => {
 
         <div className="flex w-full items-center justify-center md:w-1/2 md:justify-end">
           <div className="relative">
-            <Image
-              src={jason}
-              alt="Jason's photo"
-              className="w-full max-w-72 self-end rounded-full"
-            />
+            <div className="flex h-full w-full items-center justify-center md:justify-end">
+              <ImageTemplate src={jason} alt="Jason's photo" isContact={true} />
+            </div>
 
             <CodeWithLove />
           </div>
