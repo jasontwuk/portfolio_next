@@ -33,7 +33,8 @@ export default function RootLayout({
   `;
 
   return (
-    <html lang="en">
+    // *** Note: fix a "dark" class hydration warning (because using Local Storage to store "theme")
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         {/* Note: script to set theme class on initial load */}
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
