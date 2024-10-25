@@ -38,7 +38,11 @@ export const Contact = () => {
           <div className="flex flex-col items-start justify-center gap-4">
             {icons.map((icon) => (
               <Link
-                className="group flex items-center justify-start gap-2"
+                className={clsx(
+                  "group flex items-center justify-start gap-2",
+                  // +++ Note: focus-visible
+                  "focus-visible:rounded-full focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-yellow-300 dark:focus-visible:outline-yellow-100",
+                )}
                 href={icon.link}
                 target="_blank"
                 rel="noreferrer"

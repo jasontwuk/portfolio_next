@@ -103,7 +103,11 @@ export const ThemeSwitch = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="group p-2 duration-200 hover:scale-110"
+      className={clsx(
+        "group p-2 duration-200 hover:scale-110",
+        // +++ Note: focus-visible
+        "focus-visible:rounded-full focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-yellow-300 dark:focus-visible:outline-yellow-100",
+      )}
       aria-describedby="theme-mode"
     >
       <div className="relative">

@@ -108,7 +108,11 @@ export const Projects = (props: ProjectsProps) => {
           >
             <Link
               href={project.id}
-              className="group flex w-full flex-col items-center justify-center gap-4"
+              className={clsx(
+                "group flex w-full flex-col items-center justify-center gap-4",
+                // +++ Note: focus-visible
+                "focus-visible:rounded-lg focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-yellow-300 dark:focus-visible:outline-yellow-100",
+              )}
             >
               <div
                 className={clsx(

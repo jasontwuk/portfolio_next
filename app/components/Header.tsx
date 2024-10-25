@@ -16,6 +16,8 @@ export const Header = () => {
           "flex items-center justify-center text-blue-800 duration-200 hover:scale-110 hover:text-blue-600",
           // +++ Note: for dark mode
           "dark:text-blue-400 dark:hover:text-white",
+          // +++ Note: focus-visible
+          "focus-visible:rounded-full focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-yellow-300 dark:focus-visible:outline-yellow-100",
         )}
         aria-label="Homepage Link"
       >
@@ -37,6 +39,8 @@ export const Header = () => {
                   "rounded-full bg-slate-300 p-1.5 text-base leading-4 text-white duration-200 hover:scale-110 hover:bg-blue-600",
                   // +++ Note: for dark mode
                   "dark:bg-slate-400 dark:hover:bg-blue-600",
+                  // +++ Note: focus-visible
+                  "focus-visible:rounded-full focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-yellow-300 dark:focus-visible:outline-yellow-100",
                 )}
                 aria-label={`${icon.name} link`}
               >

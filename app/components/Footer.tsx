@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import clsx from "clsx";
 
 import { UnderlineText } from "./UnderlineText";
 
@@ -13,7 +14,14 @@ export const Footer = () => {
       <div className="flex flex-wrap items-center justify-center gap-2 text-center tracking-wide">
         <span>
           © 2020 - present&nbsp;
-          <Link href="/" className="group no-underline">
+          <Link
+            href="/"
+            className={clsx(
+              "group no-underline",
+              // +++ Note: focus-visible
+              "focus-visible:rounded-full focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-yellow-300 dark:focus-visible:outline-yellow-100",
+            )}
+          >
             <UnderlineText>Jason Liao</UnderlineText>
           </Link>
           .

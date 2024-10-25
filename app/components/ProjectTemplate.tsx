@@ -77,6 +77,8 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                     "group flex h-16 w-16 flex-col items-center justify-center gap-0 rounded-full bg-blue-100 duration-200 hover:scale-110 hover:bg-blue-600",
                     // +++ Note: for dark mode
                     "dark:bg-blue-300 dark:hover:bg-blue-600",
+                    // +++ Note: focus-visible
+                    "focus-visible:rounded-full focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-yellow-300 dark:focus-visible:outline-yellow-100",
                   )}
                 >
                   <div
