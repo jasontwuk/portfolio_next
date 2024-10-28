@@ -55,7 +55,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
             <h1
               className={clsx(
                 nunito.className,
-                "text-3xl font-bold text-blue-800 md:text-4xl",
+                "text-3xl font-bold tracking-widest text-blue-800 md:text-4xl",
                 // +++ Note: for dark mode
                 "dark:text-blue-400",
               )}
@@ -127,7 +127,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
             <h2
               className={clsx(
                 nunito.className,
-                "w-full border-b border-slate-400 py-2 text-center text-xl text-blue-800 md:text-2xl",
+                "w-full border-b border-slate-400 py-2 text-center text-xl tracking-widest text-blue-800 md:text-2xl",
                 // +++ Note: for dark mode
                 "dark:text-white",
               )}
@@ -162,7 +162,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
             <h2
               className={clsx(
                 nunito.className,
-                "w-full border-b border-slate-400 py-2 text-center text-xl text-blue-800 md:text-2xl",
+                "w-full border-b border-slate-400 py-2 text-center text-xl tracking-widest text-blue-800 md:text-2xl",
                 // +++ Note: for dark mode
                 "dark:text-white",
               )}
@@ -220,7 +220,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                 <h2
                   className={clsx(
                     nunito.className,
-                    "w-full text-xl text-blue-800 md:text-2xl",
+                    "w-full text-xl tracking-widest text-blue-800 md:text-2xl",
                     // +++ Note: for dark mode
                     "dark:text-white",
                   )}

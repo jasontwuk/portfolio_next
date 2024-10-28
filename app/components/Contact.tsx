@@ -20,7 +20,7 @@ export const Contact = () => {
       <h2
         className={clsx(
           nunito.className,
-          "text-3xl font-bold text-blue-800 md:text-4xl",
+          "text-3xl font-bold tracking-widest text-blue-800 md:text-4xl",
           // +++ Note: for dark mode
           "dark:text-blue-400",
         )}

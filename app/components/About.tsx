@@ -64,7 +64,7 @@ export const About = () => {
       <h2
         className={clsx(
           nunito.className,
-          "text-3xl font-bold text-blue-800 md:text-4xl",
+          "text-3xl font-bold tracking-widest text-blue-800 md:text-4xl",
           // +++ Note: for dark mode
           "dark:text-blue-400",
         )}
@@ -95,7 +95,7 @@ export const About = () => {
         <h3
           className={clsx(
             nunito.className,
-            "w-full rounded-md bg-white py-2 text-center text-xl text-blue-800 md:text-2xl",
+            "w-full rounded-md bg-white py-2 text-center text-xl tracking-widest text-blue-800 md:text-2xl",
             // +++ Note: for dark mode
             "dark:bg-zinc-800 dark:text-white",
           )}
