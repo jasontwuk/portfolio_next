@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { AccessibilityReporter } from "./components/AccessibilityReporter";
 
-import { roboto } from "./utilities/fonts";
+import { league_spartan } from "./utilities/fonts";
 import clsx from "clsx";
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export default function RootLayout({
 
       <body
         className={clsx(
-          roboto.className,
+          league_spartan.className,
           "w-full bg-white px-5 py-5 md:py-12",
           // +++ Note: for dark mode
           "dark:bg-zinc-800",

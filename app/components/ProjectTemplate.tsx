@@ -98,7 +98,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                     />
                   </div>
 
-                  <span className="text-sm capitalize text-blue-800 group-hover:text-white">
+                  <span className="text-base capitalize text-blue-800 group-hover:text-white">
                     {obj.text}
                   </span>
                 </Link>
@@ -112,7 +112,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
           {intro.map((item, index) => {
             return (
               <p
-                className="text-lg font-thin leading-7 tracking-wider md:text-xl md:leading-8"
+                className="text-xl font-light leading-7 tracking-wider md:text-2xl md:leading-8"
                 key={index}
               >
                 {item}
@@ -127,7 +127,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
             <h2
               className={clsx(
                 nunito.className,
-                "w-full border-b border-slate-400 py-2 text-center text-xl tracking-widest text-blue-800 md:text-2xl",
+                "w-full border-b border-slate-400 py-2 text-center text-xl font-bold tracking-widest text-blue-800 md:text-2xl",
                 // +++ Note: for dark mode
                 "dark:text-white",
               )}
@@ -151,7 +151,15 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                       )}
                     />
 
-                    <span className="font-thin">{item}</span>
+                    <em
+                      className={clsx(
+                        "text-base font-light not-italic md:text-lg",
+                        // +++ Note: add "mt-1" to make the icon and text look more centralised
+                        "mt-1",
+                      )}
+                    >
+                      {item}
+                    </em>
                   </li>
                 );
               })}
@@ -162,7 +170,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
             <h2
               className={clsx(
                 nunito.className,
-                "w-full border-b border-slate-400 py-2 text-center text-xl tracking-widest text-blue-800 md:text-2xl",
+                "w-full border-b border-slate-400 py-2 text-center text-xl font-bold tracking-widest text-blue-800 md:text-2xl",
                 // +++ Note: for dark mode
                 "dark:text-white",
               )}
@@ -186,7 +194,15 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                       )}
                     />
 
-                    <span className="font-thin">{item}</span>
+                    <em
+                      className={clsx(
+                        "text-base font-light not-italic md:text-lg",
+                        // +++ Note: add "mt-1" to make the icon and text look more centralised
+                        "mt-1",
+                      )}
+                    >
+                      {item}
+                    </em>
                   </li>
                 );
               })}
@@ -220,7 +236,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                 <h2
                   className={clsx(
                     nunito.className,
-                    "w-full text-xl tracking-widest text-blue-800 md:text-2xl",
+                    "w-full text-xl font-bold tracking-widest text-blue-800 md:text-2xl",
                     // +++ Note: for dark mode
                     "dark:text-white",
                   )}
@@ -233,7 +249,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                     {obj.list.map((item, i) => {
                       return (
                         <li key={i} className="list-disc">
-                          <p className="text-lg font-thin leading-7 tracking-wider md:text-xl md:leading-8">
+                          <p className="text-xl font-light leading-7 tracking-wider md:text-2xl md:leading-8">
                             {item}
                           </p>
                         </li>
@@ -247,7 +263,7 @@ export const ProjectTemplate = (props: ProjectTemplateProps) => {
                     {obj.contents.map((item, index) => {
                       return (
                         <p
-                          className="text-lg font-thin leading-7 tracking-wider md:text-xl md:leading-8"
+                          className="text-xl font-light leading-7 tracking-wider md:text-2xl md:leading-8"
                           key={index}
                         >
                           {item}

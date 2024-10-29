@@ -76,7 +76,7 @@ export const About = () => {
         {paragraphs.map((p, index) => {
           return (
             <p
-              className="text-lg font-thin leading-7 tracking-wider md:text-xl md:leading-8"
+              className="text-xl font-light leading-7 tracking-wider md:text-2xl md:leading-8"
               key={index}
             >
               {p}
@@ -95,7 +95,7 @@ export const About = () => {
         <h3
           className={clsx(
             nunito.className,
-            "w-full rounded-md bg-white py-2 text-center text-xl tracking-widest text-blue-800 md:text-2xl",
+            "w-full rounded-md bg-white py-2 text-center text-xl font-bold tracking-widest text-blue-800 md:text-2xl",
             // +++ Note: for dark mode
             "dark:bg-zinc-800 dark:text-white",
           )}
@@ -119,7 +119,15 @@ export const About = () => {
                   )}
                 />
 
-                <em className="font-thin not-italic">{item}</em>
+                <em
+                  className={clsx(
+                    "text-base font-light not-italic md:text-lg",
+                    // +++ Note: add "mt-1" to make the icon and text look more centralised
+                    "mt-1",
+                  )}
+                >
+                  {item}
+                </em>
               </span>
             );
           })}

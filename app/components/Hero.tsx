@@ -100,7 +100,6 @@ export const Hero = () => {
 
         <h1
           className={clsx(
-            nunito.className,
             "translate-y-8 text-4xl font-thin text-slate-600 opacity-0 duration-200 md:text-5xl",
             // +++ Note: for dark mode
             "dark:text-white",

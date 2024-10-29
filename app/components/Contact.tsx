@@ -30,7 +30,7 @@ export const Contact = () => {
 
       <div className="flex flex-col items-start justify-center gap-5 md:flex-row md:pl-5">
         <div className="flex w-full flex-col items-start justify-center gap-8 md:w-1/2">
-          <p className="text-lg font-thin leading-7 tracking-wider md:text-xl md:leading-8">
+          <p className="text-xl font-light leading-7 tracking-wider md:text-2xl md:leading-8">
             Got a question or just want to say hi? Feel free to drop me a
             message. Let’s get the conversation started!
           </p>
@@ -61,7 +61,7 @@ export const Contact = () => {
                   />
                 </div>
 
-                <UnderlineText>{icon.name}</UnderlineText>
+                <UnderlineText className="mt-1">{icon.name}</UnderlineText>
               </Link>
             ))}
           </div>

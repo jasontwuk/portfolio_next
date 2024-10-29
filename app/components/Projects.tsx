@@ -133,7 +133,7 @@ export const Projects = (props: ProjectsProps) => {
                 <h3
                   className={clsx(
                     nunito.className,
-                    "w-full text-xl font-bold tracking-widest text-slate-500",
+                    "w-full text-xl font-bold tracking-widest text-slate-500 md:text-2xl",
                     // +++ Note: for dark mode
                     "dark:text-white",
                   )}
@@ -141,7 +141,7 @@ export const Projects = (props: ProjectsProps) => {
                   {project.title}
                 </h3>
 
-                <p className="text-lg font-thin tracking-wide">
+                <p className="text-lg font-light tracking-wide md:text-xl">
                   {project.text}
                 </p>
 
